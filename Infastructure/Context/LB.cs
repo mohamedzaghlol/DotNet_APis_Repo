@@ -17,8 +17,6 @@ public partial class LB : DbContext
     public virtual DbSet<Product> Products { get; set; }
     public virtual DbSet<Person> Persons { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDb)\\MSSQLLocalDB;initial catalog=LB; User Id=Zaghlol;Password=123456789;App=EntityFramework;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
